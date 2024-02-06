@@ -36,9 +36,10 @@ function fakeBackend() {
             // route functions
 
             function authenticate() {
+                console.log(`function authenticate() 111 - &&&&&&`);
                 const { username, password } = body();
                 const user = users.find(x => x.username === username && x.password === password);
-
+                console.log(`function authenticate() 222 - &&&&&&. ${JSON.stringify(users)}`);
                 if (!user) return error('Username or password is incorrect');
 
                 return ok({
