@@ -32,3 +32,4 @@ router.beforeEach(async (to) => {
         return '/account/login';
     }
 });
+console.log(`routers index`);
